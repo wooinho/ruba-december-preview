@@ -51,3 +51,32 @@
   .holiday-section { padding-block: 48px; }
   .gifts li { align-items: flex-start; font-size: .91rem; }
 }
+
+/* Product-led hero and founder editorial */
+.holiday-hero {
+  color: #25262b;
+  background: linear-gradient(116deg, #faf8f5 5%, #f0eff4 59%, #e3e5ed 100%);
+}
+.holiday-hero .hero { gap: clamp(1.3rem, 4vw, 4.5rem); padding-block: clamp(2rem, 5vw, 5rem); }
+.holiday-hero .hero h1 { font-size: clamp(3rem, 5.25vw, 5.6rem); line-height: 1.15; letter-spacing: -.08em; }
+.holiday-hero .tag, .holiday-hero .intro { color: #504d58; }
+.holiday-hero .intro strong { color: #2e2930; }
+.holiday-hero .campaign, .holiday-hero h1 span { color: #793944; }
+.holiday-hero .hero-image { border: 0; background: #dfe3ed; box-shadow: 0 18px 46px #38385120; }
+.holiday-hero .hero-image img { aspect-ratio: 1.11; object-position: 48% 50%; filter: none; }
+.holiday-hero figcaption { background: #f9f8f5eb; left: auto; right: 13px; }
+.holiday-hero .pill { background: var(--forest); border-color: var(--forest); color: #fff8ef; }
+.holiday-hero .pill:hover { background: #803a4a; }
+.founder-section { background: #eee9e8; border-block: 1px solid #ded3d4; }
+.founder-layout { display: grid; grid-template-columns: .88fr 1.12fr; gap: clamp(1.5rem, 5vw, 5.5rem); }
+.founder-story blockquote { margin: 0; border-left: 2px solid #9b646b; padding-left: 1rem; font-size: clamp(1.35rem, 2.45vw, 2.05rem); line-height: 1.5; letter-spacing: -.04em; font-weight: 750; }
+.founder-story > p { margin-top: .9rem; color: var(--mute); }
+.founder-story .quote-credit { font-size: .88rem; font-weight: 650; margin-top: .55rem; margin-bottom: 1.35rem; }
+.founder-sources { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem 1.3rem; margin: 1.25rem 0 0; padding: .85rem 0 0; border-top: 1px solid #d6c9ca; }
+.founder-sources time { margin-left: .45rem; font-size: .8rem; color: var(--mute); }
+@media (max-width: 760px) {
+  .holiday-hero .hero { padding-block: 1rem 1.75rem; }
+  .holiday-hero .hero h1 { font-size: clamp(2.55rem, 9vw, 4.25rem); }
+  .holiday-hero .hero-image img { aspect-ratio: 1.4; }
+  .founder-layout { grid-template-columns: 1fr; gap: 1.4rem; }
+}
