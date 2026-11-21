@@ -1,0 +1,29 @@
+.trial-hero { background: #efe6df; }
+.trial-hero-layout { display: grid; grid-template-columns: 1fr .9fr; align-items: center; gap: clamp(1.4rem, 5vw, 4rem); padding-block: clamp(2.75rem, 7vw, 6rem); }
+.trial-kicker { color: #793944; font-size: .9rem; font-weight: 750; margin-bottom: 1.4rem; }
+.trial-hero .campaign { color: var(--forest); }
+.trial-hero h1 { font-size: clamp(2.65rem, 5.3vw, 5rem); line-height: 1.12; letter-spacing: -.08em; margin: .65rem 0 1rem; }
+.trial-hero h1 + p { max-width: 29rem; color: var(--mute); }
+.trial-hero strong { color: var(--forest); }
+.trial-hero .pill { margin-top: 1.4rem; }
+.trial-hero figure { max-width: 490px; border-radius: 5px; overflow: hidden; }
+.trial-steps ol { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; }
+.trial-steps li { padding: 1.25rem; border-top: 2px solid #a7656b; background: #fff8ee; }
+.trial-steps li p { margin-top: .55rem; color: var(--mute); }
+.trial-apply { background: #eee3dc; }
+.trial-apply-layout { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.3rem, 5vw, 4.5rem); align-items: start; }
+.trial-apply details { margin-top: 1.2rem; }
+.application-form { display: grid; gap: .8rem; background: #fffbf3; border: 1px solid var(--line); padding: clamp(1rem, 3vw, 2rem); border-radius: 5px; }
+.application-form[hidden] { display: none; }
+.application-form > label { font-weight: 700; }
+.application-form input[type=url] { min-height: 46px; border: 1px solid #a59089; background: white; border-radius: 4px; padding: .6rem .7rem; font: inherit; width: 100%; }
+.application-check { display: flex; align-items: flex-start; gap: .6rem; font-size: .91rem; margin: .35rem 0; }
+.application-check input { accent-color: var(--forest); margin-top: .36rem; flex-shrink: 0; }
+.back-link { text-align: right; font-size: .9rem; }
+@media (max-width: 700px) {
+  .trial-hero-layout, .trial-steps ol, .trial-apply-layout { grid-template-columns: 1fr; }
+  .trial-hero figure { width: 100%; }
+  .trial-hero figure img { aspect-ratio: 1; object-fit: contain; }
+  .trial-hero h1 { font-size: clamp(2.35rem, 9vw, 3.8rem); }
+  .footer { padding-bottom: 28px; }
+}
