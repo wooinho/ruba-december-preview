@@ -29,7 +29,10 @@ const campaignScene = new URLSearchParams(location.search).get('scene');
 const matchingScene = sceneInputs.find(input => input.value === campaignScene);
 if (matchingScene) matchingScene.checked = true;
 showSelectedScene();
-sceneInputs.forEach(input => input.addEventListener('change', showSelectedScene));
+sceneInputs.forEach(input => input.addEventListener('change', () => {
+  showSelectedScene();
+  campaignEvent('ruba_scene_select', { scene: input.value });
+}));
 
 document.querySelectorAll('[data-trial]').forEach(button => button.addEventListener('click', () => {
   trigger = button;
@@ -44,6 +47,7 @@ document.querySelectorAll('[data-trial]').forEach(button => button.addEventListe
 form.addEventListener('submit', event => {
   event.preventDefault();
   document.querySelector('#finished-scene').textContent = selectedScene()[0];
+  campaignEvent('ruba_experience_complete');
   success.hidden = false;
   entry.hidden = true;
   dialog.setAttribute('aria-labelledby', 'success-title');
@@ -51,9 +55,41 @@ form.addEventListener('submit', event => {
 });
 
 dialog.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => dialog.close()));
-dialog.addEventListener('close', () => trigger?.focus());
+dialog.addEventListener('close', () => trigger?.focus({ preventScroll: true }));
 
-const signup = document.querySelector('#signup');
-document.querySelectorAll('[data-signup]').forEach(button => {
-  button.addEventListener('click', () => signup.showModal());
+
+function campaignEvent(event, properties = {}) {
+  window.dataLayer ??= [];
+  window.dataLayer.push({ event, campaign: 'ruba_december_2026', ...properties });
+}
+
+const memberLink = document.querySelector('[data-conversion="signup_click"]');
+const mobileNext = document.querySelector('[data-mobile-next]');
+mobileNext.addEventListener('click', () => {
+  if (mobileNext.href === memberLink.href) campaignEvent('ruba_signup_click', { placement: 'mobile_bar' });
 });
+
+document.querySelectorAll('[data-conversion]').forEach(link => {
+  link.addEventListener('click', () => campaignEvent('ruba_' + link.dataset.conversion));
+});
+
+const observedSections = new Map([
+  [document.querySelector('#scenes'), 'ruba_experience_view'],
+  [document.querySelector('#holiday'), 'ruba_offer_view']
+]);
+
+const observer = new IntersectionObserver(entries => {
+  entries.filter(entry => entry.isIntersecting).forEach(entry => {
+    const event = observedSections.get(entry.target);
+    campaignEvent(event);
+    if (event === 'ruba_offer_view') {
+      mobileNext.href = memberLink.href;
+      mobileNext.textContent = '루바 공식몰 회원가입';
+    }
+    observer.unobserve(entry.target);
+  });
+}, { threshold: 0.15 });
+
+observedSections.forEach((event, element) => observer.observe(element));
+
+dialog.querySelector('[data-continue]').addEventListener('click', () => dialog.close());

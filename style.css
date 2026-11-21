@@ -26,19 +26,11 @@
 .holiday-hero .pill, .purchase-offer .pill { background: var(--lime); border-color: var(--lime); color: #402723; }
 .holiday-hero .pill:hover { background: #ffeabc; }
 .holiday-section { padding-block: 64px; }
-.holiday-offers { display: grid; grid-template-columns: 1fr 1.22fr; gap: 1rem; margin-top: 1.75rem; }
-.holiday-offers article { padding: clamp(1.25rem, 3vw, 2.45rem); border: 1px solid var(--line); border-radius: 5px; }
 .purchase-offer { background: #4e2830; color: #fff3e1; }
 .purchase-offer .eyebrow { color: #f1d59b; }
 .purchase-offer .offer-status { font-size: clamp(1.4rem, 3vw, 2.05rem); font-weight: 800; margin-top: .8rem; color: #ffdda0; }
 .purchase-offer a { display: inline-block; margin-top: .9rem; }
 .signup-offer { background: #fffbf3; }
-.gifts { list-style: none; padding: 0; margin: 1.1rem 0; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
-.gifts li { display: flex; gap: .65rem; align-items: center; padding: .65rem; background: #f2e5d6; border-radius: 4px; line-height: 1.38; }
-.gift-icon { position: relative; display: inline-block; width: 24px; height: 27px; flex: 0 0 24px; }
-.warmer { background: linear-gradient(145deg, #fffaf1, #d4bba9); border: 1px solid #a68472; border-radius: 43%; box-shadow: inset 0 -2px #b69382; }
-.warmer::after { content: ""; position: absolute; width: 4px; height: 4px; left: 9px; bottom: 5px; background: #945048; border-radius: 50%; }
-.coffee { background: linear-gradient(#b9804e 0 16%, #e1a86e 16% 75%, #b9804e 75%); clip-path: polygon(3% 8%, 97% 8%, 97% 23%, 85% 23%, 75% 100%, 25% 100%, 15% 23%, 3% 23%); }
 .signup-offer details { margin-top: .9rem; padding-bottom: 0; }
 .tech { background: #efdfd3; }
 .scene-feature { background: #f0e3d4; }
@@ -47,9 +39,7 @@
 @media (max-width: 760px) {
   .holiday-hero .hero h1 { font-size: clamp(2.65rem, 10vw, 4.6rem); }
   .holiday-hero .hero h1 br { display: initial; }
-  .holiday-offers { grid-template-columns: 1fr; }
   .holiday-section { padding-block: 48px; }
-  .gifts li { align-items: flex-start; font-size: .91rem; }
 }
 
 /* Product-led hero and founder editorial */
@@ -79,4 +69,27 @@
   .holiday-hero .hero h1 { font-size: clamp(2.55rem, 9vw, 4.25rem); }
   .holiday-hero .hero-image img { aspect-ratio: 1.4; }
   .founder-layout { grid-template-columns: 1fr; gap: 1.4rem; }
+}
+
+/* Experience first, then membership and purchase */
+.holiday-hero .hero h1 { font-size: clamp(2.9rem, 4.9vw, 5.1rem); }
+.member-offer { display: grid; grid-template-columns: 1.18fr 1fr; margin-top: 1.7rem; border: 1px solid var(--line); border-radius: 7px; background: #fffbf3; overflow: hidden; }
+.gift-visual { background: #e9d9c5; display: flex; flex-direction: column; justify-content: center; }
+.gift-visual img { aspect-ratio: 1.5; object-fit: cover; }
+.gift-visual figcaption { padding: .6rem .9rem; color: #514139; font-size: .84rem; }
+.member-offer .signup-offer { padding: clamp(1.25rem, 3.3vw, 2.8rem); align-self: center; }
+.gift-list { padding-left: 1.1rem; margin: .9rem 0 1.15rem; font-weight: 650; }
+.gift-list li + li { margin-top: .25rem; }
+.offer-note { color: var(--mute); margin-top: .65rem; font-size: .89rem; }
+.final-purchase { margin-top: 1.2rem; padding: clamp(1.3rem, 3.4vw, 2.65rem); display: flex; align-items: center; justify-content: space-between; gap: 1.2rem; border-radius: 6px; }
+.final-purchase .offer-status { margin-block: .2rem; }
+.final-purchase a { display: inline-flex; margin-top: 0; flex-shrink: 0; }
+.final-purchase .pill:hover { background: #ffeabc; }
+#trial-success a { margin-top: .9rem; }
+@media (max-width: 760px) {
+  .holiday-hero .hero h1 { font-size: clamp(2.45rem, 8.5vw, 4.2rem); }
+  .member-offer { grid-template-columns: 1fr; }
+  .final-purchase { align-items: flex-start; flex-direction: column; }
+  .mobile-cta { justify-content: center; }
+  .mobile-cta .pill { max-width: 100%; }
 }
