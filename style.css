@@ -116,3 +116,14 @@
   .scene-layout { grid-template-columns: 1fr; }
   .hero-founder { margin-top: 1rem; }
 }
+
+/* Event prize photography */
+.gift-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 1px; background: var(--line); }
+.gift-photos .gift-visual { min-width: 0; }
+.gift-photos .gift-visual img { aspect-ratio: 1; object-fit: contain; }
+.gift-photo-warmer { background: #f4e7d7; }
+.gift-photo-coffee { background: #fff; }
+.gift-photos .gift-visual figcaption { text-align: center; background: #f4e7d7; }
+.signup-offer .gift-list { padding: 0; list-style: none; display: grid; gap: .55rem; }
+.signup-offer .gift-list li { display: grid; grid-template-columns: max-content 1fr; align-items: start; gap: .6rem; margin: 0; }
+.signup-offer .gift-list strong { padding: .06rem .5rem; border-radius: 20px; background: #f0e2d2; color: var(--forest); font-size: .83rem; }
