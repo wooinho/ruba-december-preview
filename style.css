@@ -118,12 +118,10 @@
 }
 
 /* Event prize photography */
-.gift-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 1px; background: var(--line); }
-.gift-photos .gift-visual { min-width: 0; }
-.gift-photos .gift-visual img { aspect-ratio: 1; object-fit: contain; }
-.gift-photo-warmer { background: #f4e7d7; }
-.gift-photo-coffee { background: #fff; }
-.gift-photos .gift-visual figcaption { text-align: center; background: #f4e7d7; }
+.gift-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-content: center; gap: clamp(.5rem, 1.1vw, .9rem); padding: clamp(.6rem, 1.1vw, .9rem); background: #f4e7d7; }
+.gift-photos .gift-visual { display: grid; grid-template-rows: auto 1fr; min-width: 0; overflow: hidden; border-radius: 3px; background: #fffbf3; }
+.gift-photos .gift-visual img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; object-position: center; }
+.gift-photos .gift-visual figcaption { display: flex; align-items: center; justify-content: center; min-height: 3.15rem; padding: .5rem .45rem; text-align: center; background: #fffbf3; }
 .signup-offer .gift-list { padding: 0; list-style: none; display: grid; gap: .55rem; }
 .signup-offer .gift-list li { display: grid; grid-template-columns: max-content 1fr; align-items: start; gap: .6rem; margin: 0; }
 .signup-offer .gift-list strong { padding: .06rem .5rem; border-radius: 20px; background: #f0e2d2; color: var(--forest); font-size: .83rem; }
