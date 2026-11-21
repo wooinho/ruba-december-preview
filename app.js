@@ -52,3 +52,8 @@ form.addEventListener('submit', event => {
 
 dialog.querySelectorAll('[data-close]').forEach(button => button.addEventListener('click', () => dialog.close()));
 dialog.addEventListener('close', () => trigger?.focus());
+
+const signup = document.querySelector('#signup');
+document.querySelectorAll('[data-signup]').forEach(button => {
+  button.addEventListener('click', () => signup.showModal());
+});
