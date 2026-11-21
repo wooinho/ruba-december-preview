@@ -103,7 +103,7 @@
 .scene-layout { grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); }
 .scenes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .65rem; }
 .scenes label .scene-tile { padding: 0; overflow: hidden; }
-.scene-tile img { width: 100%; aspect-ratio: 1.42; object-fit: cover; background: #eadcd0; }
+.scene-tile img { width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; background: #eadcd0; }
 .scenes label .scene-caption { display: block; border: 0; min-height: 0; border-radius: 0; background: transparent; padding: .45rem .55rem .55rem; }
 .scenes input:checked + .scene-tile { outline: 2px solid var(--forest); outline-offset: 0; }
 .scenes input:focus-visible + .scene-tile { outline-offset: 3px; }
