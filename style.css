@@ -256,3 +256,65 @@ html { scroll-padding-top: 120px; }
   .study-metrics { grid-template-columns: 1fr; }
   .study-conditions dd { font-size: .85rem; }
 }
+
+
+/* Reveal RUBA pastel palette and typography */
+.reveal-pastel {
+  --paper: #fcf9f6;
+  --ink: #30292d;
+  --mute: #544b50;
+  --forest: #6d3648;
+  --line: #ddcfd1;
+  --display-serif: "Noto Serif KR", "Nanum Myeongjo", "Batang", serif;
+  font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+}
+.reveal-pastel .header, .reveal-pastel .mobile-cta { background: #fffaf7; }
+.reveal-pastel .reveal-hero h1, .reveal-pastel main h2 {
+  font-family: var(--display-serif);
+  font-weight: 500;
+  letter-spacing: -.06em;
+  line-height: 1.24;
+}
+.reveal-pastel .campaign { font-family: var(--display-serif); }
+.reveal-pastel .reveal-hero { background: #f0edf7; color: #3a2939; }
+.reveal-pastel .reveal-hero-layout { padding-block: clamp(2rem, 5vw, 4.8rem); }
+.reveal-pastel .reveal-hero-copy { padding-block: .75rem; }
+.reveal-pastel .reveal-hero h1 { font-size: clamp(2.25rem, 4.7vw, 4.7rem); }
+.reveal-pastel .reveal-hero .campaign { color: #763b50; }
+.reveal-pastel .reveal-hero .sub { color: var(--mute); }
+.reveal-pastel .reveal-hero .pill { background: var(--forest); border-color: var(--forest); color: #fff8f5; }
+.reveal-pastel .reveal-hero .pill:hover { background: #824559; }
+.reveal-pastel .reveal-hero-image { border-radius: clamp(.75rem, 2vw, 1.7rem); background: #e4e4ef; }
+.reveal-pastel .reveal-hero-image img { aspect-ratio: 1.42; object-position: 50% center; }
+.pastel-magazine { background: #f8eee3; }
+.reveal-pastel .editorial-magazine figure, .reveal-pastel .editorial-tech figure { border-radius: clamp(.75rem, 2vw, 1.35rem); overflow: hidden; }
+.reveal-pastel .editorial-tech { background: #eaf1ed; }
+.reveal-pastel .editorial-tech figure { background: #fff; }
+.reveal-pastel .editorial-study { background: #f1e9f4; color: var(--ink); }
+.reveal-pastel .editorial-study .eyebrow { color: var(--forest); }
+.reveal-pastel .editorial-study .sub, .reveal-pastel .study-metrics p, .reveal-pastel .study-note { color: var(--mute); }
+.reveal-pastel .study-metrics { gap: .75rem; background: none; border: 0; }
+.reveal-pastel .study-metrics li { background: #fdf9ff; border: 1px solid #ded0e1; border-radius: .75rem; }
+.reveal-pastel .study-conditions { border-color: #d2c1d5; }
+.pastel-scenes { background: #f7ecef; }
+.reveal-pastel .story-card .scene-tile { background: #fffaf8; border-radius: .75rem; }
+.reveal-pastel .story-card:hover .scene-tile { background: #f7e7ee; outline-color: var(--forest); }
+.reveal-pastel .founder-section { background: #f2ede5; }
+.pastel-products { background: #ecf0f6; }
+.reveal-pastel .plans article { background: #fafbfe; border-color: #d5dce8; border-radius: .85rem; }
+.reveal-pastel .reveal-trial { background: #f7eaf0; }
+.pastel-holiday { background: #f7ede4; }
+.reveal-pastel .purchase-offer { background: #eadde9; color: var(--ink); }
+.reveal-pastel .purchase-offer .eyebrow, .reveal-pastel .purchase-offer .offer-status { color: var(--forest); }
+.reveal-pastel .purchase-offer .pill { color: #fff8f5; background: var(--forest); border-color: var(--forest); }
+.reveal-pastel .purchase-offer .pill:hover { background: #824559; }
+.reveal-pastel .reveal-support { background: #edf2ed; margin-top: 0; }
+.reveal-pastel .reveal-footer { background: #efe4ec; color: var(--ink); }
+.reveal-pastel .reveal-footer .logo span { color: var(--forest); }
+.reveal-pastel .reveal-footer p { border-color: #d7c7d2; }
+@media (max-width: 760px) {
+  .reveal-pastel .reveal-hero-layout { gap: 1.3rem; }
+  .reveal-pastel .reveal-hero-copy { padding: 0; }
+  .reveal-pastel .reveal-hero h1 { font-size: clamp(2.1rem, 8vw, 3.65rem); }
+  .reveal-pastel .reveal-hero-image img { aspect-ratio: 1.44; }
+}
