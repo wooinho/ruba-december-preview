@@ -150,3 +150,57 @@
   .story-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
   .story-card p { font-size: .86rem; }
 }
+
+/* Reveal, RUBA storefront */
+html { scroll-padding-top: 120px; }
+.reveal-header { background: #fffbf5; }
+.reveal-masthead { min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.reveal-store, .reveal-footer nav { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem clamp(.7rem, 2.4vw, 1.65rem); }
+.reveal-store a { padding-block: .45rem; color: var(--mute); font-size: .86rem; }
+.reveal-navigation { border-top: 1px solid #ebded1; }
+.reveal-navigation .wrap { display: flex; gap: clamp(1rem, 3.5vw, 2.65rem); overflow-x: auto; scrollbar-width: thin; }
+.reveal-navigation a { flex: none; padding-block: .62rem; font-size: .88rem; font-weight: 650; }
+.reveal-header a:not(.logo), .reveal-footer a:not(.logo) { text-decoration: none; text-underline-offset: .23em; }
+.reveal-header a:not(.logo):hover, .reveal-footer a:not(.logo):hover { text-decoration: underline; }
+.reveal-navigation a:focus-visible { outline-offset: -3px; }
+.reveal-hero { background: #eee5df; border-bottom: 1px solid var(--line); }
+.reveal-hero-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr); align-items: center; gap: clamp(1.6rem, 4.5vw, 4rem); padding-block: clamp(2rem, 5.5vw, 5rem); }
+.reveal-hero h1 { margin: .35rem 0 1.25rem; color: #38242b; font-family: Georgia, serif; font-weight: 400; font-size: clamp(4.75rem, 10vw, 9.5rem); line-height: .86; letter-spacing: -.085em; }
+.reveal-hero h1 span { color: #8b4753; }
+.reveal-hero-headline { font-weight: 750; font-size: clamp(1.25rem, 2.2vw, 1.85rem); letter-spacing: -.055em; }
+.reveal-hero-copy .sub { font-size: clamp(.95rem, 1.35vw, 1.1rem); }
+.reveal-hero-image { display: grid; overflow: hidden; background: #dfe3ed; border: 1px solid #d1d2d9; min-width: 0; }
+.reveal-hero-image img, .reveal-hero-image figcaption { grid-area: 1 / 1; }
+.reveal-hero-image img { aspect-ratio: 1.16; object-fit: cover; object-position: 51% 50%; }
+.reveal-hero-image figcaption { align-self: end; justify-self: end; margin: .8rem; padding: .32rem .72rem; color: #352b34; background: #fffaf2; font-size: .7rem; letter-spacing: .12em; }
+.reveal-section-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .65rem 1.3rem; }
+.reveal-products .plans { gap: clamp(.65rem, 2vw, 1.4rem); }
+.reveal-products .plans article { display: flex; flex-direction: column; }
+.reveal-products .plans article .reveal-product-body { padding: clamp(1rem, 3vw, 1.9rem); }
+.reveal-products .plans article img { border-bottom: 1px solid var(--line); background: #eee9e3; }
+.reveal-products .plans article .eyebrow { margin: 0 0 .3rem; color: #793944; font-size: .82rem; }
+.reveal-products .plans article .reveal-product-links { padding: 0; display: flex; flex-wrap: wrap; gap: .45rem 1.2rem; }
+.reveal-trial { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .85rem 1.4rem; margin-top: 1rem; padding: clamp(1rem, 3vw, 1.9rem); background: #efe3d8; border: 1px solid var(--line); border-radius: 5px; }
+.reveal-trial p { margin-top: .25rem; color: var(--mute); }
+.reveal-support { background: #f1e8df; border-top: 1px solid var(--line); margin-top: 1.25rem; }
+.reveal-support-layout { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(1rem, 5vw, 4rem); }
+.reveal-questions details { border-color: var(--line); }
+.reveal-questions > a { display: inline-block; margin-top: .45rem; }
+.reveal-footer { padding-block: 2rem; color: #f9ebdf; background: #42232d; }
+.reveal-footer .logo span { color: #e8b19d; }
+.reveal-footer-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .9rem 1.5rem; }
+.reveal-footer p { margin-top: 1.1rem; padding-top: .9rem; border-top: 1px solid #8b6771; font-size: .84rem; }
+@media (max-width: 760px) {
+  html { scroll-padding-top: 105px; }
+  .reveal-masthead { min-height: 54px; }
+  .reveal-store a { font-size: .78rem; }
+  .reveal-navigation a { padding-block: .48rem; font-size: .8rem; }
+  .reveal-hero-layout, .reveal-support-layout { grid-template-columns: 1fr; }
+  .reveal-hero h1 { font-size: clamp(4.55rem, 17vw, 7.15rem); }
+  .reveal-hero-image img { aspect-ratio: 1.45; }
+  .reveal-footer { padding-bottom: 6rem; }
+}
+@media (max-width: 480px) {
+  .reveal-products .plans { grid-template-columns: 1fr; }
+  .reveal-store { gap: .35rem .68rem; }
+}
