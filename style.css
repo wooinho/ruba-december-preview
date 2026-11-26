@@ -269,11 +269,11 @@ html { scroll-padding-top: 120px; }
   font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
 }
 .reveal-pastel .header, .reveal-pastel .mobile-cta { background: #fffaf7; }
-.reveal-pastel .reveal-hero h1, .reveal-pastel main h2 {
-  font-family: var(--display-serif);
-  font-weight: 500;
-  letter-spacing: -.06em;
-  line-height: 1.24;
+.reveal-pastel .reveal-hero h1, .reveal-pastel main h2, .reveal-pastel main h3 {
+  font-family: inherit;
+  font-weight: 750;
+  letter-spacing: -.055em;
+  line-height: 1.2;
 }
 .reveal-pastel .campaign { font-family: var(--display-serif); }
 .reveal-pastel .reveal-hero { background: #f0edf7; color: #3a2939; }
